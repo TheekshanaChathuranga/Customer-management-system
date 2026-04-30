@@ -127,11 +127,11 @@ INSERT INTO city (name, country_id) VALUES
 -- Sample Customers (for testing)
 -- ------------------------------------------------------------
 INSERT INTO customer (name, date_of_birth, nic_number) VALUES
-('Kamal Perera',    '1985-03-15', '198512345678'),
-('Nimal Silva',     '1990-07-22', '199023456789'),
-('Saman Fernando',  '1978-11-30', '197834567890'),
-('Kumari Dissanayake', '1995-01-10', '199545678901'),
-('Ruwan Jayasinghe','1982-06-05', '198256789012');
+('Kamal Perera',    '1985-03-15', '851234567V'),
+('Nimal Silva',     '1990-07-22', '902345678V'),
+('Saman Fernando',  '1978-11-30', '783456789V'),
+('Kumari Dissanayake', '1995-01-10', '954567890V'),
+('Ruwan Jayasinghe','1982-06-05', '825678901V');
 
 -- Sample mobile numbers
 INSERT INTO customer_mobile (customer_id, mobile_number) VALUES

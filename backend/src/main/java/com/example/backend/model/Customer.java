@@ -7,9 +7,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
@@ -39,10 +38,10 @@ public class Customer {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<CustomerMobile> mobileNumbers = new ArrayList<>();
+    private Set<CustomerMobile> mobileNumbers = new LinkedHashSet<>();
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<CustomerAddress> addresses = new ArrayList<>();
+    private Set<CustomerAddress> addresses = new LinkedHashSet<>();
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
